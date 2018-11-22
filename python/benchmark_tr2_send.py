@@ -1,3 +1,13 @@
+#!/usr/bin/env python3
+"""
+Generator TX to vcnet2 without smart-contract. Single thread. 
+Send a N wei from eth.coinbase to pre-defined eth-node (vcnet2) using RAW transaction.
+
+./benchmark_tr2_send.py 0 ~/vcnet2/keystore/UTC--2018-10-11T10-31-16.260152486Z--1d94baec6903bd722953d1111d3b03ea3fa99378 123456
+0 - start number for nonce
+~/vcnet2/keystore/UTC--2018-10-11T10-31-16.260152486Z--1d94baec6903bd722953d1111d3b03ea3fa99378 - encrypted keystore
+123456 - plaintext password
+"""
 import datetime
 import json
 import web3
@@ -63,7 +73,7 @@ instance=int(sys.argv[1])
 
 with open(sys.argv[2]) as keyfile:
 	encrypted_key = keyfile.read()
-	private_key = w3.eth.account.decrypt(encrypted_key, '123456')
+	private_key = w3.eth.account.decrypt(encrypted_key, sys.argv[3]) #password
 
 money_to_frend=1
 mynonce=w3.eth.getTransactionCount(w3.eth.coinbase)+instance
