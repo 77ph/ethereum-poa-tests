@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+"""
+Advanced generator TX to vcnet2 using Contract Counter. Multithread. 
+Call N:10000 function incrementCounter() via multi-threading queue with M:2-5 workers.
+
+./benchmark_tr2_thread_counter.py
+ABI = Counter.json
+"""
 import datetime
 import json
 import web3
