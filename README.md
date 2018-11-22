@@ -17,7 +17,11 @@ The purpose of the tests was to create a simple TPS measurement method (transact
 ![Testing scheme](https://github.com/77ph/ethereum-poa-tests/blob/master/docs/poa%20tests.png)
 
 **Contracts**
+
 To ensure a significant difference in the value of a single transaction, two contracts were created.
 
 - Addchunk - an unindexed array of structs (cost per tx ~ 156к Gas)
 - Counter - just simple counter (cost per tx ~ 23к Gas)
+
+**Transactions generators**
+
