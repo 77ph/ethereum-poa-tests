@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+"""
+Measurer state txpool in network (via w3 RPC) and counter mined transaction in blockchain per time. 
+Worked together with generator. log.file source for plot.
+
+./txpool2.py > log.txt
+Located in PoA node.
+"""
 import datetime
 import json
 import web3
