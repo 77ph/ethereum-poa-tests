@@ -1,3 +1,10 @@
+#!/usr/bin/env python3
+"""
+Generator TX to vcnet2 using Contract Counter. Single thread. Call a function incrementCounter() with 2 ms delay in 600s. 
+./benchmark_tr2_counter.py
+ABI = Counter.json
+"""
+
 import datetime
 import json
 import web3
