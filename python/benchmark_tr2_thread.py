@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+"""
+Advanced generator TX to vcnet2 using Contract AddChunk. Multithread. 
+Call N:10000 function.addChunkInfo() via multi-threading queue with M workers.
+./benchmark_tr2_thread.py
+ABI = AddChunk.json
+"""
+
 import datetime
 import json
 import web3
@@ -126,7 +134,7 @@ start = datetime.datetime.now()
 count = 1
 
 while True:
-	many_transactions_threaded_Queue(addchunk, 10000, job_id, client_id, node_id, chunk_time, chunk_size, node_type, 100)
+	many_transactions_threaded_Queue(addchunk, 10000, job_id, client_id, node_id, chunk_time, chunk_size, node_type, 5) # TX = 10000, workers = 5
 	current = datetime.datetime.now()
 	elapsed = current - start
 	# print(elapsed.seconds,":",elapsed.microseconds)
