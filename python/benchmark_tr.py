@@ -1,3 +1,10 @@
+#!/usr/bin/env python3
+"""
+Generator TX to vcnet using Contract AddChunk. Single thread. Call a functions.addChunkInfo with 20 ms delay in 600s.
+./benchmark_tr.py
+ABI = AddChunk.json
+"""
+
 import datetime
 import json
 import web3
