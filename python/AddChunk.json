@@ -1,0 +1,235 @@
+[
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "chunks",
+      "outputs": [
+        {
+          "name": "job_id",
+          "type": "uint256"
+        },
+        {
+          "name": "client_id",
+          "type": "address"
+        },
+        {
+          "name": "node_id",
+          "type": "address"
+        },
+        {
+          "name": "chunk_time",
+          "type": "uint256"
+        },
+        {
+          "name": "chunk_size",
+          "type": "uint256"
+        },
+        {
+          "name": "node_type",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "fallback"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Deposit",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "newJob_id",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "newClient_id",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "newNode_id",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "newChunk_time",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "newChunk_size",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "newNode_type",
+          "type": "bytes32"
+        }
+      ],
+      "name": "AddChunkInfo",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newJob_id",
+          "type": "uint256"
+        },
+        {
+          "name": "newClient_id",
+          "type": "address"
+        },
+        {
+          "name": "newNode_id",
+          "type": "address"
+        },
+        {
+          "name": "newChunk_time",
+          "type": "uint256"
+        },
+        {
+          "name": "newChunk_size",
+          "type": "uint256"
+        },
+        {
+          "name": "newNode_type",
+          "type": "bytes32"
+        }
+      ],
+      "name": "addChunkInfo",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getCount",
+      "outputs": [
+        {
+          "name": "Count",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getLastRec",
+      "outputs": [
+        {
+          "name": "_job_id",
+          "type": "uint256"
+        },
+        {
+          "name": "_client_id",
+          "type": "address"
+        },
+        {
+          "name": "_node_id",
+          "type": "address"
+        },
+        {
+          "name": "_chunk_time",
+          "type": "uint256"
+        },
+        {
+          "name": "_chunk_size",
+          "type": "uint256"
+        },
+        {
+          "name": "_node_type",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getRec",
+      "outputs": [
+        {
+          "name": "_job_id",
+          "type": "uint256"
+        },
+        {
+          "name": "_client_id",
+          "type": "address"
+        },
+        {
+          "name": "_node_id",
+          "type": "address"
+        },
+        {
+          "name": "_chunk_time",
+          "type": "uint256"
+        },
+        {
+          "name": "_chunk_size",
+          "type": "uint256"
+        },
+        {
+          "name": "_node_type",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_to",
+          "type": "address"
+        }
+      ],
+      "name": "kill",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+]

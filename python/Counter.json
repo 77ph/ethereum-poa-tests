@@ -1,0 +1,25 @@
+[
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "incrementCounter",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getCount",
+      "outputs": [
+        {
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+]
