@@ -14,4 +14,4 @@ The purpose of the tests was to create a simple TPS measurement method (transact
 - vcnet2 - (1 sec block_period, 23000000 GasLimit)
 
 
-![Testing scheme] ()
+![Testing scheme](https://github.com/77ph/ethereum-poa-tests/blob/master/docs/poa%20tests.png)
